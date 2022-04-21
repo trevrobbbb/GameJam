@@ -20,6 +20,8 @@ None
 # Created by: End of Semester
 Trevor Robbins
 - Coding
+- Menu implementation
+- Systems
 Megan Marsh
 - Artwork - Enemy, power up sprites, lvl 3 sprites, and menu background
 Deakon Booher
