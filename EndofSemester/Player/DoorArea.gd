@@ -3,6 +3,8 @@ extends Area2D
 const PLAYERNAME = "Player"
 onready var door = get_node("..")
 onready var Door = $AnimatedSprite
+onready var Monster = $Monster
+onready var Phone = $Phone
 func _ready():
 	connect("body_entered", self, "_on_body_enter")
 	connect("process", self, "_process")
@@ -29,7 +31,8 @@ func _on_body_enter(body):
 
 func _on_Area2D_body_entered(body):
 	if (body.get_name() == PLAYERNAME):
-		
+
+
 		get_tree().change_scene("res://level 2.tscn")
 			
 			

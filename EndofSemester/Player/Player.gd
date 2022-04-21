@@ -3,12 +3,12 @@ extends KinematicBody2D
 const UP = Vector2(0,-1)
 const GRAVITY = 20
 const MAXFALLSPEED = 800
-const MAXSPEED = 400
+var MAXSPEED = 400
 const JUMPFORCE = 800
 
 var motion = Vector2()
 var facing_right = true
-const ACCEL = 80
+var ACCEL = 80
 
 onready var sounds = $Step2
 onready var t = Timer.new()
@@ -59,3 +59,31 @@ func _physics_process(delta):
 func _on_Void_body_entered(body):
 	queue_free()
 	get_tree().change_scene("res://GUI/Game Over.tscn")
+
+
+
+func _on_Monster_body_entered(body):
+	ACCEL = 200
+	MAXSPEED = 700
+	var t = Timer.new()
+	t.set_wait_time(5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	ACCEL = 80
+	MAXSPEED = 400
+
+
+func _on_Phone_body_entered(body):
+	ACCEL = 10
+	MAXSPEED = 100
+	var t = Timer.new()
+	t.set_wait_time(5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	ACCEL = 80
+	MAXSPEED = 400
+	
