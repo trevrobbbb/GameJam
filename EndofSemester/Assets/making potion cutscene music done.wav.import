@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/making potion cutscene music done.wav-01f2461d3c41c3e551e74fd27563d17a.sample"
+
+[deps]
+
+source_file="res://Assets/making potion cutscene music done.wav"
+dest_files=[ "res://.import/making potion cutscene music done.wav-01f2461d3c41c3e551e74fd27563d17a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
